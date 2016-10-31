@@ -1,0 +1,22 @@
+
+<div ng-repeat="app in vm.data track by $index">
+
+    <header>
+      <!--<h1>{{ app.title }}</h1>-->
+    </header>
+      <div class="row" >
+        <div  class="col-xs-12 col-sm-6" ng-repeat="r in app.restaurants">
+          <div class="card restaurant" ng-click="vm.open($index)"><img ng-src="{{r.image}}"  class="card-img-top img-fluid" />
+            <div class="card-block" >
+              <ul class="restaurant-rating">
+                  <li ng-repeat="stars in vm.getRating(r.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>
+              </ul>
+              <h4 class="card-title">{{r.name}}</h4>
+              <p class="restaurant-location">{{r.location.city}}, {{r.country}}</p>
+              <p class="card-text">{{r.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+

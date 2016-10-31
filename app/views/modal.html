@@ -1,0 +1,21 @@
+
+<div class="modal-body">
+	<div class="container row">
+		<div class="col-xs-12 col-sm-6" >
+			<div class="card restaurant"> <img ng-src="{{vm.restaurant.image}}" class="card-img-top img-fluid" />
+				<div class="card-block">
+					<ul class="restaurant-rating">
+						<li ng-repeat="stars in vm.getRating(vm.restaurant.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>
+					</ul>
+					<h4 class="card-title">{{vm.restaurant.name}}</h4>
+					<p class="restaurant-location">{{vm.restaurant.location.city}}, {{vm.restaurant.country}}</p>
+					<p class="card-text">{{vm.restaurant.description }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="vm.ok()">OK</button>
+	<button class="btn btn-warning" ng-click="vm.cancel()">Cancel</button>
+</div>

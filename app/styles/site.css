@@ -1,0 +1,10 @@
+.restaurant {
+  position: relative;
+}
+.restaurant .restaurant-rating {
+  padding: 0;
+  text-align: center;
+}
+.restaurant .restaurant-rating .fa-star {
+  margin: 0 2px;
+}
