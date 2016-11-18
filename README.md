@@ -18,10 +18,13 @@ Running `grunt test` will run the unit tests with karma.
 
 
 ## Project Milestones And Udacity Rubrick
- - [ ] Convert to typescript components in the angular 1.5.7 library
+ - [ ] App includes all requirements, including restaurant information, customer reviews and a new review form.
  - [ ] Responsiveness - App is equally functional on mobile and desktop, using responsive design to ensure its displayed in a useable state.
  - [ ] Accessibility: Images - All content-related images include appropriate alternate text.
  - [x] Accessibility: Focus - Focus is appropriately managed allowing users to noticeably tab through each of the important elements of the page. Modal or interstitial windows appropriately lock focus.
  - [ ] Accessibility: Elements - Elements on the page use the appropriate semantic elements. For those elements in which a semantic element is not available, appropriate ARIA roles are defined.
  - [ ] Accessibility: Design - Color selections and contrast are made with accessibility in mind.
  - [x] App Delivery: Build Process - App includes a build process (such as Grunt or Gulp). Assets are minimized and concatenated as appropriate.
+ 
+### Optional
+ - [ ] Convert to typescript components in the angular 1.5.7 library
