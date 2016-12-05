@@ -1,0 +1,66 @@
+<div class="col-md-12">
+	<div>
+		<div>
+			<div class=" col-sm-6">
+				<div class="card restaurant"> <img ng-src="{{vm.restaurant.image}}" class="card-img-top img-fluid" />
+					<div class="card-block">
+						<ul class="restaurant-rating">
+							<li ng-repeat="stars in vm.getRating(vm.restaurant.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>
+						</ul>
+						<h4 class="card-title">{{vm.restaurant.name}}</h4>
+						<p class="restaurant-location">{{vm.restaurant.location.city}}, {{vm.restaurant.country}}</p>
+						<p class="card-text">{{vm.restaurant.description }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div>
+		<div>
+			<h3 class="text-center">Reviews</h3>
+			<div class=" col-sm-6">
+				<div class="card restaurant">
+					<div class="card-block" ng-repeat="r in vm.reviews track by $index ">
+						<ul class="restaurant-rating">
+							<li ng-repeat="stars in vm.getRating(r.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>
+						</ul>
+						<h6 class="card-title">{{r.username}}</h6>
+						<p class="card-text">{{r.review}}</p>
+					</div>
+				</div>
+                <div ng-show="!ReviewForm">
+                <a href ng-click="ReviewForm = !ReviewForm">Post a Review</a>
+                </div>
+				<div class="row form" ng-show="ReviewForm">
+					<form name="newReview" >
+						<div class="form-group row">
+							<label for="example-text-input" class="col-xs-2 col-form-label">Name</label>
+							<div class="col-xs-10">
+								<input ng-model="vm.Review.username" class="form-control" type="text" placeholder="Your Name" id="example-text-input" required>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="example-text-input" class="col-xs-2 col-form-label">Review</label>
+							<div class="col-xs-10">
+								<textarea ng-model="vm.Review.review" class="form-control" type="text" value="Artisanal kale" id="example-text-input" required></textarea>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="example-text-input" class="col-xs-2 col-form-label">Rating</label>
+							<div class="col-xs-10">
+								<!--<input type="range" min="0" max="5" ng-model="vm.Review.rating" class="form-control" type="text" value="Artisanal kale" id="example-text-input"></textarea>-->
+								<div star-rating ng-model="vm.Review.rating" max="5" on-rating-select="vm.Review.rating = (rating)"></div>
+								<div><strong>Rating 1:</strong> {{vm.Review.rating}}</div>
+							</div>
+						</div>
+						<button data-ng-click="vm.submit(vm.Review)" ng-disabled="newReview.$invalid" class="btn btn-primary">Submit</button>
+						<button ng-click="ReviewForm = !ReviewForm" class="btn btn-secondary">Cancel</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,5 +1,5 @@
 
-<div class="modal-body">
+<div class="modal-body" >
 	<div class="container row">
 		<div class="col-xs-12 col-sm-6" >
 			<div class="card restaurant"> <img ng-src="{{vm.restaurant.image}}" class="card-img-top img-fluid" />
@@ -17,5 +17,8 @@
 </div>
 <div class="modal-footer">
 	<button class="btn btn-primary" ng-click="vm.ok()">OK</button>
-	<button class="btn btn-warning" ng-click="vm.cancel()">Cancel</button>
+	<button class="btn btn-secondary" ng-click="vm.cancel()">Cancel</button>
+	<div class="pull-left">
+		<button class="btn btn-primary" ng-click="vm.getReviews()">Reviews</button>
+	<div>
 </div>

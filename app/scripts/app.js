@@ -11,6 +11,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainController',
         controllerAs: 'vm'
+    }).when('/:id', {
+        templateUrl: 'views/review.html',
+        controller: 'ReviewController',
+        controllerAs: 'vm'
     })
       .otherwise({
         redirectTo: '/'

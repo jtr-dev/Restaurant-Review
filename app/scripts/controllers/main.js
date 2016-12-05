@@ -5,86 +5,65 @@
     .module('app')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$scope', '$uibModal', ];
+  MainController.$inject = ['$scope', '$uibModal','$http','$log', '$location', '$routeParams'];
 
-  function MainController($scope, $uibModal, ModalController, $log) {
+  function MainController($scope, $uibModal, $http, $log, $routeParams, $location,  ModalController ) {
     var vm = this;
-
-    vm.hello = 'Hello world';
+    
+    var paramValue = $routeParams.id
+    console.log(paramValue)
 
     vm.getRating = function (num) {
       return new Array(num);
     }
 
+    function restaurantIndex(i) {
+      $scope.current = i;
+      $scope.next = i++;
+      $scope.previous = i--;
+    }
+    function previousRestaurant () {
+      console.log($scope.previous)
+      vm.open($scope.previous)
+  }
+    function nextRestaurant(){
+      console.log($scope.next)
+      vm.open($scope.next)
+    }
 
-
-  
-    
     vm.open = function (restaurant) {
 
-        var modalInstance = $uibModal.open({
+      $uibModal.open({
         templateUrl: 'views/modal.html',
         controller: 'ModalController',
         controllerAs: 'vm',
         resolve: {
-            restaurant: function () {
-                vm.restaurant = vm.data[0].restaurants[restaurant];
-                return vm.restaurant;
-                
-            }
+          restaurants: function () {
+            vm.restaurants = {restaurants: vm.data[0].restaurants, selected: restaurant};
+            restaurantIndex(restaurant)
+            return vm.restaurants;
+          }
         }
-    });
+      });
+    };
 
 
-
-  };
-
-
-   
-
-    vm.data = [
-      {
-        title: 'Restaurant viewer',
-        restaurants: [{
-          name: "FooBar",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-          rating: 4,
-          image: "https://dummyimage.com/600x400/3d3c3d/ffffff.png",
-          location: {
-            country: "England",
-            city: "Bristol"
-          }
-        }, {
-          name: "LoremBar",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-          rating: 3,
-          image: "https://dummyimage.com/600x400/3d3c3d/ffffff.png",
-          location: {
-            country: "America",
-            city: "New York City"
-          }
-        }, {
-          name: "IpsumBar",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-          rating: 2,
-          image: "https://dummyimage.com/600x400/3d3c3d/ffffff.png",
-          location: {
-            country: "Germany",
-            city: "Berlin"
-          }
-        }, {
-          name: "BarBar",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-          rating: 4,
-          image: "https://dummyimage.com/600x400/3d3c3d/ffffff.png",
-          location: {
-            country: "France",
-            city: "Paris"
-          }
-        }]
+    $scope.myFunct = function (keyEvent) {
+      if (keyEvent.which === 37) {
+        previousRestaurant()
       }
-    ]
+      else if (keyEvent.which === 39) {
+        nextRestaurant()
+      }
+    };
 
+
+
+
+
+    $http.get('storage/restaurants.json').success(function(data) {
+        vm.data = data;
+    });
 
   }
 

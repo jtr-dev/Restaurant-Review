@@ -1,0 +1,42 @@
+[
+    {
+        "reviews": [
+            {
+                "restaurant_id": 1,
+                "username": "FooBar",
+                "review": "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
+                "rating": 2
+            },
+            {
+                "restaurant_id": 3,
+                "username": "FooBar",
+                "review": "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
+                "rating": 3
+            },
+            {
+                "restaurant_id": 0,
+                "username": "FooBar",
+                "review": "0Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
+                "rating": 5
+            },
+            {
+                "restaurant_id": 2,
+                "username": "FooBar",
+                "review": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
+                "rating": 4
+            },
+            {
+                "restaurant_id": 1,
+                "username": "FooBar",
+                "review": "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
+                "rating": 3
+            },
+            {
+                "restaurant_id": 2,
+                "username": "FooBar",
+                "review": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
+                "rating": 2
+            }
+        ]
+    }
+]
