@@ -86,10 +86,8 @@
         });
         function updateReviews() {
             $http.get('storage/reviews.json').success(function (data) {
-                vm.reviews = data[0].reviews.filter(r => r.restaurant_id == $routeParams.id)
-                // vm.reviews = data[0].reviews;
-                console.log(vm.reviews)
-            });
+                vm.reviews = data[0].reviews.filter(function (r){(r.restaurant_id == $routeParams.id)})
+            })
         }
     }
 })();
