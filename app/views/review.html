@@ -52,7 +52,6 @@
 							<div class="col-xs-10">
 								<!--<input type="range" min="0" max="5" ng-model="vm.Review.rating" class="form-control" type="text" value="Artisanal kale" id="example-text-input"></textarea>-->
 								<div star-rating ng-model="vm.Review.rating" max="5" on-rating-select="vm.Review.rating = (rating)"></div>
-								<div><strong>Rating 1:</strong> {{vm.Review.rating}}</div>
 							</div>
 						</div>
 						<button data-ng-click="vm.submit(vm.Review)" ng-disabled="newReview.$invalid" class="btn btn-primary">Submit</button>
