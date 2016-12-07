@@ -36,19 +36,19 @@
 				<div class="row form" ng-show="ReviewForm">
 					<form name="newReview" >
 						<div class="form-group row">
-							<label for="example-text-input" class="col-xs-2 col-form-label">Name</label>
+							<label for="name" class="col-xs-2 col-form-label">Name</label>
 							<div class="col-xs-10">
 								<input ng-model="vm.Review.username" class="form-control" type="text" placeholder="Your Name" id="example-text-input" required>
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="example-text-input" class="col-xs-2 col-form-label">Review</label>
+							<label for="Review" class="col-xs-2 col-form-label">Review</label>
 							<div class="col-xs-10">
 								<textarea ng-model="vm.Review.review" class="form-control" type="text" value="Artisanal kale" id="example-text-input" required></textarea>
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="example-text-input" class="col-xs-2 col-form-label">Rating</label>
+							<label for="Rating" class="col-xs-2 col-form-label">Rating</label>
 							<div class="col-xs-10">
 								<!--<input type="range" min="0" max="5" ng-model="vm.Review.rating" class="form-control" type="text" value="Artisanal kale" id="example-text-input"></textarea>-->
 								<div star-rating ng-model="vm.Review.rating" max="5" on-rating-select="vm.Review.rating = (rating)"></div>

@@ -6,7 +6,7 @@
     "bootstrap": "^3.2.0",
     "angular-route": "^1.4.0",
     "angular-bootstrap": "*",
-    "font-awesome": "*"
+    "font-awesome": "latest"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
@@ -19,6 +19,12 @@
         "less/bootstrap.less",
         "dist/css/bootstrap.css",
         "dist/js/bootstrap.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css",
+        "fonts/"
       ]
     }
   }
