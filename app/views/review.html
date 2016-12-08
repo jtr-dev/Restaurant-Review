@@ -8,8 +8,11 @@
 							<li ng-repeat="stars in vm.getRating(vm.restaurant.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>
 						</ul>
 						<h4 class="card-title">{{vm.restaurant.name}}</h4>
-						<p class="restaurant-location">{{vm.restaurant.location.city}}, {{vm.restaurant.country}}</p>
+						<p class="restaurant-location">
+							{{vm.restaurant.location.country}}, {{vm.restaurant.location.state}}, {{vm.restaurant.location.city}}, {{vm.restaurant.location.address}}
+						</p>
 						<p class="card-text">{{vm.restaurant.description }}</p>
+						<p class="card-text">{{vm.restaurant.statement }}</p>
 					</div>
 				</div>
 			</div>
@@ -20,23 +23,28 @@
 	<div>
 		<div>
 			<h3 class="text-center">Reviews</h3>
+			<hr>
 			<div class=" col-sm-6">
 				<div class="card restaurant">
 					<div class="card-block" ng-repeat="r in vm.reviews track by $index ">
 						<ul class="restaurant-rating">
+							<h5 class="card-title"> <b> {{r.username}} </b> </h5> <i> {{r.date}} </i>
 							<li ng-repeat="stars in vm.getRating(r.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>
+							<p class="card-text">{{r.review}}</p>
 						</ul>
-						<h6 class="card-title">{{r.username}}</h6>
-						<p class="card-text">{{r.review}}</p>
+						<hr>
+
 					</div>
 				</div>
-                <div ng-show="!ReviewForm">
-                <a href ng-click="ReviewForm = !ReviewForm">Post a Review</a>
-                </div>
+
+				<div ng-show="!ReviewForm">
+					<a href ng-click="ReviewForm = !ReviewForm">Post a Review</a>
+				</div>
+
 				<div class="row form" ng-show="ReviewForm">
-					<form name="newReview" >
+					<form name="newReview">
 						<div class="form-group row">
-							<label for="name" class="col-xs-2 col-form-label">Name</label>
+							<label for="Name" class="col-xs-2 col-form-label">Name</label>
 							<div class="col-xs-10">
 								<input ng-model="vm.Review.username" class="form-control" type="text" placeholder="Your Name" id="example-text-input" required>
 							</div>
@@ -50,7 +58,6 @@
 						<div class="form-group row">
 							<label for="Rating" class="col-xs-2 col-form-label">Rating</label>
 							<div class="col-xs-10">
-								<!--<input type="range" min="0" max="5" ng-model="vm.Review.rating" class="form-control" type="text" value="Artisanal kale" id="example-text-input"></textarea>-->
 								<div star-rating ng-model="vm.Review.rating" max="5" on-rating-select="vm.Review.rating = (rating)"></div>
 							</div>
 						</div>

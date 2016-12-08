@@ -3,39 +3,45 @@
         "reviews": [
             {
                 "restaurant_id": 1,
-                "username": "FooBar",
-                "review": "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-                "rating": 2
+                "username": "Dave",
+                "review": "The steak was damn near cold as soon as they brought it to my table.",
+                "rating": 2,
+                "date": "12/2/2015"
             },
             {
                 "restaurant_id": 3,
-                "username": "FooBar",
-                "review": "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-                "rating": 3
+                "username": "Linda H.",
+                "review": "This place has some excellent interior decorations but the food has left me wanting. There's a cheaper place nearby with waaayy better food",
+                "rating": 4,
+                "date": "12/8/2016"
             },
             {
                 "restaurant_id": 0,
-                "username": "FooBar",
-                "review": "0Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-                "rating": 5
+                "username": "Pwnzer",
+                "review": "If I could afford it, I would go here for lunch every day! Maybe even just buy the place myself :) ",
+                "rating": 5,
+                "date": "10/12/2016"
             },
             {
                 "restaurant_id": 2,
-                "username": "FooBar",
-                "review": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-                "rating": 4
+                "username": "Alpha Omega",
+                "review": "Pretty cool place, dark lighting. Great for that anniversary date.",
+                "rating": 4,
+                "date": "11/21/2016"
             },
             {
                 "restaurant_id": 1,
-                "username": "FooBar",
-                "review": "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-                "rating": 3
+                "username": "Mr. Waiting",
+                "review": "I guess they need more staff,  waited 15 min for someone to wait my table, only person around was bartender.",
+                "rating": 3,
+                "date": "12/5/2016"
             },
             {
                 "restaurant_id": 2,
-                "username": "FooBar",
-                "review": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere vehicula justo, blandit luctus nibh rhoncus in. Curabitur eget arcu et arcu tincidunt efficitur vitae at nisi. Aenean ullamcorper ligula ultricies libero commodo euismod. Vestibulum quis efficitur ex, sed luctus nisl.",
-                "rating": 2
+                "username": "Daphney B.",
+                "review": "I waited 45 min for my food, AND IT WASN'T EVEN THAT BUSY! ",
+                "rating": 2,
+                "date": "10/21/2016"
             }
         ]
     }
