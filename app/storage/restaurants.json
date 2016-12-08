@@ -18,7 +18,7 @@
           "open": "12 PM",
           "close": "2 AM"
         },
-        "image": "https://pixabay.com/get/e835b20b2ef01c22d9584518a33219c8b66ae3d111b0134094f9c67b/dining-room-103464_1920.jpg",
+        "image": "images/dining-room.jpg",
         "location": {
           "country": "Canada",
           "state": "BC V8X 4Y9",
@@ -41,7 +41,7 @@
           "open": "12 PM",
           "close": "2 AM"
         },
-        "image": "https://pixabay.com/get/ef31b60c2afc1c22d9584518a33219c8b66ae3d111b0134094f9c37b/vienna-647328_1920.jpg",
+        "image": "images/cafe2.jpg",
         "location": {
           "country": "America",
           "state": "New York",
@@ -50,7 +50,7 @@
         }
       },
       {
-        "name": "IpsumBar",
+        "name": "Tomasso’s Pizza & Subs",
         "description": "Located in Florida, Tomasso’s Pizza & Subs is an Italian restaurant that offers the best in Italian food. Their menu ranges from a wide variety of pastas, pizzas, calzones, burgers, sandwiches, subs, and more.",
         "statement": "We are Committed to using the finest ingredients in our recipes. No food leaves our kitchen that we ourselves would not eat.",
         "rating": 3,
@@ -66,7 +66,7 @@
           "open": "12 PM",
           "close": "2 AM"
         },
-        "image": "https://pixabay.com/get/e836b50c2bf6063ed1534705fb0938c9bd22ffd41db9104394f1c67fae/restaurant-1343327_1920.jpg",
+        "image": "/images/restaurant.jpg",
         "location": {
           "country": "America",
           "state": "Florida",
@@ -86,7 +86,7 @@
           "open": "9 AM",
           "close": "9 PM"
         },
-        "image": "https://pixabay.com/get/e833b70b20f0043ed1584d05fb0938c9bd22ffd41db9104394f1c670a5/restaurant-1664845_1280.jpg",
+        "image": "images/croatia.jpg",
         "location": {
           "country": "Canada",
           "state": "QC J9B 1P1",
