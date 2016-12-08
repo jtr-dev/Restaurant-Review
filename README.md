@@ -19,6 +19,9 @@ Running `grunt test` will run the unit tests with karma.
 
 ## Project Milestones And Udacity Rubrick
  - [ ] App includes all requirements, including restaurant information, customer reviews and a new review form.
+   - [ ] Restaurant information (including name, a photograph, address, cuisine type and operating hours). 
+   - [ ] Review information for each restaurant (name of reviewer, date of review, 5-star rating and comments).
+   - [ ] A menu providing multiple ways to filter the restaurants (by cuisine, by location, etc).
  - [ ] Responsiveness - App is equally functional on mobile and desktop, using responsive design to ensure its displayed in a useable state.
  - [ ] Accessibility: Images - All content-related images include appropriate alternate text.
  - [x] Accessibility: Focus - Focus is appropriately managed allowing users to noticeably tab through each of the important elements of the page. Modal or interstitial windows appropriately lock focus.
