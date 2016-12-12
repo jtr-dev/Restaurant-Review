@@ -3,6 +3,8 @@
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
+Images from pixabay.com
+
 ## Build & development
 
 Run `grunt serve` for localhost. `grunt serve:dist` for 'building' and hosting of local dist folder. 
