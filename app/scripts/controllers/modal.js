@@ -8,15 +8,12 @@
     ModalController.$inject = ['$scope', '$uibModalInstance', 'restaurants', '$location']
     function ModalController($scope, $uibModalInstance, restaurants, $location) {
         var vm = this;
-        vm.restaurants = restaurants;
-        var i = vm.restaurants.selected
-        vm.restaurant = vm.restaurants.restaurants[i]
+        vm.restaurant = restaurants.restaurant
         
 
-        vm.getReviews = function(i){
-            console.log(vm.restaurants.selected)
+        vm.getReviews = function(){
             vm.ok()
-            $location.path(vm.restaurants.selected)
+            $location.path(restaurants.selected)
         }
 
         vm.getRating = function (num) {
