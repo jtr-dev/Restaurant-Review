@@ -5,7 +5,7 @@ version 0.15.1.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview. `grunt serve:dist` for preview of dist folder 
+Run `grunt serve` for localhost. `grunt serve:dist` for 'building' and hosting of local dist folder. 
 
 
 ## Testing
