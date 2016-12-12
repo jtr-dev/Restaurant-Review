@@ -3,9 +3,14 @@
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
+Images from pixabay.com
+
+[Simple api I built for this project can be found here](https://github.com/teachtyler/restaurantapi)
+
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Run `grunt serve` for localhost. `grunt serve:dist` for 'building' and hosting of local dist folder. 
+
 
 ## Testing
 
