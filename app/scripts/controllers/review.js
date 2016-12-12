@@ -7,6 +7,8 @@
         .directive('starRating', starRating);
 
     function starRating() {
+        // http://codepen.io/AstroDroid/pen/FIdHb
+        // http://angulartutorial.blogspot.com/2014/03/rating-stars-in-angular-js-using.html
         return {
             restrict: 'EA',
             template:
@@ -75,7 +77,7 @@
         vm.getRating = function (num) {
             return new Array(num);
         }
-
+Q
         vm.submit = function (review) {
             vm.reviews.push(review);
              vm.Review = {
