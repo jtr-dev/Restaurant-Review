@@ -5,9 +5,9 @@
     .module('app')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$scope', '$uibModal', '$http', '$log', '$location', '$routeParams'];
+  MainController.$inject = ['$scope', 'restaurantFactory', '$uibModal', '$http', '$log', '$location', '$routeParams'];
 
-  function MainController($scope, $uibModal, $http, $log, $routeParams, $location, ModalController) {
+  function MainController($scope, restaurantFactory, $uibModal, $http, $log, $routeParams, $location, ModalController) {
     var vm = this;
 
     var paramValue = $routeParams.id
@@ -16,32 +16,25 @@
       return new Array(num);
     }
 
-    vm.search = '';    
+    vm.search = '';
     vm.Restaurants = [];
 
 
-
-    function restaurantIndex(i) {
-      $scope.current = i;
-      $scope.next = i++;
-      $scope.previous = i--;
-    }
-    function previousRestaurant() {
-      vm.open($scope.previous)
-    }
-    function nextRestaurant() {
-      vm.open($scope.next)
-    }
+    restaurantFactory.getRestaurants()
+      .then(function (Restaurants) {
+        vm.data = Restaurants[0].restaurants;
+        console.log(vm.data)
+      });
 
 
-    
-      var ItemIndex = function(item){
-            return (vm.data.indexOf(item))
-      }
+
+    var ItemIndex = function (item) {
+      return (vm.data.indexOf(item))
+    }
 
 
     vm.open = function (restaurant, index) {
-       
+
       var i = ItemIndex(restaurant)
 
       $uibModal.open({
@@ -50,11 +43,10 @@
         controllerAs: 'vm',
         resolve: {
           restaurants: function () {
-            vm.restaurants = { 
+            vm.restaurants = {
               restaurant: vm.Restaurants[index],
-              selected: i 
+              selected: i
             };
-            restaurantIndex(restaurant)
             return vm.restaurants;
           }
         }
@@ -62,22 +54,6 @@
     };
 
 
-    $scope.myFunct = function (keyEvent) {
-      if (keyEvent.which === 37) {
-        previousRestaurant()
-      }
-      else if (keyEvent.which === 39) {
-        nextRestaurant()
-      }
-    };
-
-
-
-
-
-    $http.get('storage/restaurants.json').success(function (data) {
-      vm.data = data[0].restaurants;
-    });
 
   }
 

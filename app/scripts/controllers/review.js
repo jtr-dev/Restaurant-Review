@@ -50,17 +50,21 @@
         };
     }
 
-    ReviewController.$inject = ['$scope', '$http', '$routeParams', '$location'];
-    function ReviewController($scope, $http, $routeParams, $location) {
+    ReviewController.$inject = ['$scope', 'restaurantFactory', '$routeParams', '$location'];
+    function ReviewController($scope, restaurantFactory, $routeParams, $location) {
         var vm = this;
-        updateReviews()
+
         vm.ReviewForm = false;
+
+
+
 
         vm.Review = {
             restaurant_id: $routeParams.id,
             username: '',
             review: '',
             rating: 5,
+            date: datestring() 
         };
 
         vm.isReadonly = true;
@@ -74,22 +78,36 @@
 
         vm.submit = function (review) {
             vm.reviews.push(review);
-            vm.Review = '';
+             vm.Review = {
+            restaurant_id: $routeParams.id,
+            username: '',
+            review: '',
+            rating: 5,
+            date: datestring() 
+        };
+            
         }
+        function datestring () {
+            var date = new Date()
+            return date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear()
+        }
+        restaurantFactory.getRestaurants()
+            .then(function (Restaurants) {
+                vm.restaurant = Restaurants[0].restaurants[$routeParams.id];
+                console.log(vm.restaurant)
+                if (vm.restaurant === undefined) {
+                    location.pathname = ('404.html')
+                }
+            });
 
-
-        $http.get('storage/restaurants.json').success(function (data) {
-            vm.restaurant = data[0].restaurants[$routeParams.id];
-            if (vm.restaurant === undefined) {
-                location.pathname = ('404.html')
-            }
-        });
-        function updateReviews() {
-            $http.get('storage/reviews.json').success(function (data) {
-                vm.reviews = data[0].reviews.filter(function (r){
+        restaurantFactory.getReviews()
+            .then(function (Reviews) {
+                vm.reviews = Reviews[0].reviews.filter(function (r) {
                     return r.restaurant_id == $routeParams.id
                 })
-            })
-        }
+                console.log(vm.reviews)
+            });
+
+
     }
 })();

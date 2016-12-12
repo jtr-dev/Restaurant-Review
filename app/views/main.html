@@ -5,9 +5,10 @@
 			<input type="text" class="form-control" list="criteria" name="search" placeholder="Search" ng-model="search">
 			<datalist id="criteria">
 				<option value="Oysters">
+				<option value="Canada">
 				<option value="Wine">
+				<option value="Children">          
 				<option value="Pizza">
-				<option value="Children">
 				<option value="Subs">
 			</datalist>
 		</div>
@@ -21,7 +22,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-6" ng-repeat="r in (vm.Restaurants = (vm.data | filter:search )) track by $index">
 
-			<div class="card restaurant" ng-click="vm.open(r, $index)"><img ng-src="{{r.image}}" class="card-img-top img-fluid" />
+			<div class="card restaurant" ng-click="vm.open(r, $index)"><img ng-src="{{r.image}}" alt="{{r.image}}" class="card-img-top img-fluid" />
 				<div class="card-block">
 					<ul class="restaurant-rating">
 						<li ng-repeat="stars in vm.getRating(r.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>
