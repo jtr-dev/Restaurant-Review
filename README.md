@@ -5,6 +5,8 @@ version 0.15.1.
 
 Images from pixabay.com
 
+[Simple api I built for this project can be found here](https://github.com/teachtyler/restaurantapi)
+
 ## Build & development
 
 Run `grunt serve` for localhost. `grunt serve:dist` for 'building' and hosting of local dist folder. 
