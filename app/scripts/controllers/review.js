@@ -77,7 +77,7 @@
         vm.getRating = function (num) {
             return new Array(num);
         }
-Q
+
         vm.submit = function (review) {
             vm.reviews.push(review);
              vm.Review = {
