@@ -2,7 +2,7 @@
 	<div>
 		<div>
 			<div class=" col-sm-6">
-				<div class="card restaurant"> <img ng-src="{{vm.restaurant.image}}" alt="{{vm.restaurant.image}}" class="card-img-top img-fluid" />
+				<div class="card restaurant"> <img ng-src="{{vm.restaurant.image}}" alt="image {{vm.restaurant.name}} image" class="card-img-top img-fluid" />
 					<div class="card-block">
 						<ul class="restaurant-rating">
 							<li ng-repeat="stars in vm.getRating(vm.restaurant.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>

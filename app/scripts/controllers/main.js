@@ -26,7 +26,11 @@
         console.log(vm.data)
       });
 
-
+    $scope.myFunct = function (keyEvent) {
+      if (keyEvent.which === 13) {
+          vm.open(r, $index)
+      } 
+    };
 
     var ItemIndex = function (item) {
       return (vm.data.indexOf(item))

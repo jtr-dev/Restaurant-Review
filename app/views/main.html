@@ -20,9 +20,9 @@
 		<!--<h1>{{ app.title }}</h1>-->
 	</header>
 	<div class="row">
-		<div class="col-xs-12 col-sm-6" ng-repeat="r in (vm.Restaurants = (vm.data | filter:search )) track by $index">
+		<div  class="col-xs-12 col-sm-6" ng-repeat="r in (vm.Restaurants = (vm.data | filter:search )) track by $index">
 
-			<div class="card restaurant" ng-click="vm.open(r, $index)"><img ng-src="{{r.image}}" alt="{{r.image}}" class="card-img-top img-fluid" />
+			<div tabindex=0 class="card restaurant"  ng-keypress="vm.open(r, $index)" ng-click="vm.open(r, $index)"><img ng-src="{{r.image}}" alt="{{r.name}} image" class="card-img-top img-fluid" />
 				<div class="card-block">
 					<ul class="restaurant-rating">
 						<li ng-repeat="stars in vm.getRating(r.rating) track by $index" aria-hidden="true" class="fa fa-star"></li>
