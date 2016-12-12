@@ -13,7 +13,7 @@
         api.getReviews = getReviews;
 
 
-        var baseUrl = "http://restaurantdb.azurewebsites.net"
+        var baseUrl = "https://restaurantdb.azurewebsites.net"
 
         function getRestaurants() {
             return $http.get(baseUrl + '/restaurants').then(handleSuccess, handleError('Error getting all users'));
