@@ -23,7 +23,7 @@ Running `grunt test` will run the unit tests with karma.
 
 
 ## Project Milestones And Udacity Rubrick
- - [ ] App includes all requirements, including restaurant information, customer reviews and a new review form.
+ - [x] App includes all requirements, including restaurant information, customer reviews and a new review form.
    - [x] Restaurant information (including name, a photograph, address, cuisine type and operating hours). 
    - [x] Review information for each restaurant (name of reviewer, date of review, 5-star rating and comments).
    - [x] A menu providing multiple ways to filter the restaurants (by cuisine, by location, etc).
